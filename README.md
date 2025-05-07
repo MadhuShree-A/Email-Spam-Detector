@@ -38,6 +38,40 @@ This Python project connects to a Gmail account using IMAP, retrieves all emails
   - Go to [Google Account > Security > App Passwords](https://myaccount.google.com/apppasswords)
   - Generate an app password for "Mail" and "Windows Computer" (or other).
   - Use this password in place of your Gmail password in the script.
+ 
+
+## Installation
+
+### 1. Clone the Repository
+
+git clone https://github.com/yourusername/email-spam-classifier.git
+cd email-spam-classifier
+
+### 2. Update your credentials
+
+username = "your-email@gmail.com"
+app_password = "your-app-password"
+
+### 3. Run the Script
+
+python emailSpam_Detector.py
+
+Email from: example@domain.com - Subject: Win a free trip! - Classified as: Spam
+Email from: colleague@company.com - Subject: Meeting tomorrow - Classified as: Ham
+
+  ### Spam Detection Logic
+  Email is classified as Spam if:
+
+  It contains any keyword from the predefined list (e.g., "free", "winner", "buy now").
+
+  It contains URLs or hyperlinks (http:// or https://).
+
+  ### Sample Spam Keywords
+
+  free, win, winner, prize, click, here, subscribe, act, now, limited, 
+  offer, buy, discount, urgent, call, money, cash, save big, risk free, 100% free
+
+
 
 
 
